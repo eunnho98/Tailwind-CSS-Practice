@@ -1,0 +1,279 @@
+<!-- font-size: https://tailwindcss.com/docs/font-size -->
+<!-- Default Palette: https://tailwindcss.com/docs/customizing-colors#default-color-palette -->
+<!-- Padding: https://tailwindcss.com/docs/padding -->
+
+<!-- 
+  padding: p) padding-top: pt, padding-left + right: px 
+  margin: m  
+
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="text-gray-600 font-body">
+    <!--특정 사이즈 이하에선  nav가 위에 뜨도록 -->
+    <div class="grid md:grid-cols-3">
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class="text-right">
+          <div class="flex justify-between items-center">
+            <h1 class="font-bold uppercase bg-[#ec4899] p-4">
+              <!-- hover effect 주기 -->
+              <a class="hover:text-gray-700" href="/"
+                >font-bold uppercase bg-[#ec4899] p-4</a
+              >
+            </h1>
+            <!-- menu bar -->
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <svg
+                class="w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <!--hidden: dlsplay none, block: display block -->
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="font-bold py-1 border">
+              <a
+                href="#"
+                class="px-4 flex justify-end border-r-4 border-primary"
+              >
+                <span>font-bold</span>
+                <svg
+                  class="w-5 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="py-1">
+              <!-- media query -->
+              <a
+                class="text-green-500 sm:text-red-500 lg:text-blue-500 lg:text-3xl flex justify-end border-r-4 border-white"
+                href="#"
+              >
+                <span>About</span>
+                <svg
+                  class="w-5 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="py-1">
+              <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                <span>Contact</span>
+                <svg
+                  class="w-5 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="px-16 py-6 bg-gray-300 md:col-span-2">
+        <!-- flex box -->
+        <!-- md보다 크면 justify-end, 작으면 justify-center -->
+        <div class="border-red-200 border-2 flex justify-center md:justify-end">
+          <!-- transition 주기 -->
+          <a
+            class="btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-linear duration-500"
+            href="#"
+            >border-red-200 border-2</a
+          >
+          <a
+            class="btn border-primary md:border-2 hover:bg-primary hover:text-white transition ease-linear duration-500"
+            href="#"
+            >Sign up</a
+          >
+        </div>
+
+        <div class="flex justify-center items-end">
+          <div class="bg-red-500 h-4 w-6"></div>
+          <div class="bg-blue-500 h-8 w-6"></div>
+          <div class="bg-green-500 h-12 w-6"></div>
+        </div>
+
+        <header>
+          <h2 class="text-gray-700 text-6xl font-semibold">
+            text-gray-700 text-6xl font-semibold
+          </h2>
+          <h3 class="text-2xl font-semibold bg-orange-300">
+            text-2xl font-semibold bg-orange-300
+          </h3>
+        </header>
+
+        <div>
+          <h4 class="font-bold pb-2 mt-12 border-b border-gray-500">
+            font-bold pb-2 mt-12 border-b border-gray-500
+          </h4>
+
+          <!-- CSS grid 사용 -->
+          <div class="mt-8 grid lg:grid-cols-3 gap-10">
+            <!-- cards go here -->
+            <div class="card hover:shadow-2xl">
+              <!-- object-cover을 하면 사진 자체가 확대, 축소되며 fit하게 맞춰짐 -->
+              <img
+                src="img/stew.jpg"
+                alt="stew"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4 text-center">
+                <span class="font-bold">5 Bean Chili Stew</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <!-- Badge, absolute하게 해야하므로 부모를 realtive -->
+              <div class="badge">
+                <!-- heroicon에서 icon 가져올 수 있음 -->
+                <svg
+                  class="w-5 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="{1.5}"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+
+                <span>25 Minutes</span>
+              </div>
+            </div>
+            <div class="card hover:shadow-2xl">
+              <!-- object-cover을 하면 사진 자체가 확대, 축소되며 fit하게 맞춰짐 -->
+              <img
+                src="img/curry.jpg"
+                alt="stew"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4 text-center">
+                <span class="font-bold">Curry</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <!-- Badge, absolute하게 해야하므로 부모를 realtive -->
+              <div class="badge">
+                <svg
+                  class="w-5 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="{1.5}"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 Minutes</span>
+              </div>
+            </div>
+            <div class="card hover:shadow-2xl">
+              <!-- object-cover을 하면 사진 자체가 확대, 축소되며 fit하게 맞춰짐 -->
+              <img
+                src="img/noodles.jpg"
+                alt="stew"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4 text-center">
+                <span class="font-bold">Noodles</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <!-- Badge, absolute하게 해야하므로 부모를 realtive -->
+              <div class="badge">
+                <svg
+                  class="w-5 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="{1.5}"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 Minutes</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="font-bold pb-2 mt-12 border-b border-gray-500">
+            font-bold pb-2 mt-12 border-b border-gray-500
+          </h4>
+
+          <div>
+            <!-- cards go here -->
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div
+            class="btn mt-12 bg-secondary-100 text-secondary-200 hover:shadow-inner active:bg-primary active:text-white transform hover:scale-125 transition ease-linear duration-500"
+          >
+            Load more
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
